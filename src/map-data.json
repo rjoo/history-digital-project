@@ -1,0 +1,145 @@
+[
+  {
+    "year": -667,
+    "mdKey": "667bce",
+    "label": "Colonization",
+    "desc": "<h1>667 BCE</h1><p>Byzantium was first colonized by ancient Greeks from Megara. Byzantium was first colonized by ancient Greeks from Megara. Byzantium was first colonized by ancient Greeks from Megara. Byzantium was first colonized by ancient Greeks from Megara. </p>",
+    "map": {
+      "center": { "lat": 41.0122, "lng": 28.9760 },
+      "markers": [
+        {
+          "icon": "circle",
+          "position": { "lat": 41.0122, "lng": 28.9760 },
+          "label": "Byzantium"
+        }
+      ],
+      "zoom": 10
+    }
+  },
+  {
+    "year": -27,
+    "mdKey": "27bce",
+    "label": "Roman rule",
+    "desc": "<h1>27 BCE</h1><p>Byzantium came under Roman rule.</p>",
+    "map": {
+      "center": { "lat": 39.0109, "lng": 14.9259 },
+      "markers": [
+        {
+          "icon": "capital",
+          "position": { "lat": 41.9028, "lng": 12.4964 },
+          "label": "Rome"
+        },
+        {
+          "icon": "circle",
+          "position": { "lat": 41.0122, "lng": 28.9760 },
+          "label": "Byzantium"
+        }
+      ],
+      "zoom": 4,
+      "poly": [
+        {
+          "fill": "red",
+          "name": "roman-peak"
+        }
+      ]
+    }
+  },
+  {
+    "year": 330,
+    "mdKey": "330ce",
+    "label": "New capital of the Roman Empire",
+    "desc": "<h1>330 CE</h1><p>Emperor Constantine founded the new capital of Rome where Byzantium stood, soon to be known as Constantipole.</p>",
+    "map": {
+      "center": { "lat": 41.0122, "lng": 28.9760 },
+      "markers": [
+        {
+          "icon": "capital",
+          "position": { "lat": 41.0122, "lng": 28.9760 },
+          "label": "Constantipole"
+        }
+      ],
+      "zoom": 6,
+      "poly": [
+        {
+          "fill": "red",
+          "name": "roman-330ce"
+        }
+      ]
+    }
+  },
+  {
+    "year": 395,
+    "label": "Roman Empire divided",
+    "desc": "<h1>395 CE</h1><p>Roman Empire was split into two, the Western Roman Empire and the Eastern Roman Empire.</p>",
+    "map": {
+      "center": { "lat": 39.0109, "lng": 14.9259 },
+      "markers": [
+        {
+          "icon": "capital",
+          "position": { "lat": 41.9028, "lng": 12.4964 },
+          "label": "Rome"
+        },
+        {
+          "icon": "capital",
+          "position": { "lat": 41.0122, "lng": 28.9760 },
+          "label": "Constantipole"
+        }
+      ],
+      "zoom": 4,
+      "poly": [
+        {
+          "fill": "blue",
+          "name": "roman-west395ce"
+        },
+        {
+          "fill": "red",
+          "name": "roman-east395ce"
+        }
+      ]
+    }
+  },
+  {
+    "year": 476,
+    "label": "Western Empire falls",
+    "desc": "<h1>476 CE</h1><p>The Western Empire falls to the Germanic Kingdoms but the Eastern Empire continues and is now called the Byzantine Empire</p>",
+    "map": {
+      "center": { "lat": 41.0122, "lng": 28.9760 },
+      "markers": [
+        {
+          "icon": "capital",
+          "position": { "lat": 41.0122, "lng": 28.9760 },
+          "label": "Constantipole"
+        }
+      ],
+      "zoom": 5,
+      "poly": [
+        {
+          "fill": "red",
+          "name": "roman-east395ce"
+        }
+      ]
+    }
+  },
+  {
+    "year": 526,
+    "label": "Western reconquering",
+    "desc": "<h1>526 CE</h1><p>Emperor Justinian makes large efforts to regain the west.</p>",
+    "map": {
+      "center": { "lat": 41.0122, "lng": 28.9760 },
+      "markers": [
+        {
+          "icon": "capital",
+          "position": { "lat": 41.0122, "lng": 28.9760 },
+          "label": "Constantipole"
+        }
+      ],
+      "zoom": 4,
+      "poly": [
+        {
+          "fill": "red",
+          "name": "byzantine-526ce"
+        }
+      ]
+    }
+  }
+]
