@@ -2,13 +2,15 @@
   <div>
     <div ref="desc" v-html="content"></div>
 
-    <div v-if="image.src" class="image-modal">
-      <div class="image-modal-content">
-        <a class="image-modal-close" href="#" @click.prevent="clearImage">Close</a>
-        <img :src="image.src">
-        <p class="image-modal-credit">Source: {{ image.credit }}</p>
+    <transition name="fade">
+      <div v-if="image.src" class="image-modal">
+        <div class="image-modal-content">
+          <a class="image-modal-close" href="#" @click.prevent="clearImage">Close</a>
+          <img :src="image.src">
+          <p class="image-modal-credit">Source: {{ image.credit }}</p>
+        </div>
       </div>
-    </div>
+    </transition>
   </div>
 </template>
 
@@ -53,10 +55,13 @@ export default {
       this.$refs.desc.querySelectorAll('[data-image]').forEach(el => {
         this.handlers.push(el.addEventListener('click', (e) => {
           e.preventDefault();
-          this.image = {
-            src: e.target.href,
-            credit: e.target.getAttribute('data-credit')
-          }
+          if (this.image.src === e.target.href)
+            this.clearImage()
+          else
+            this.image = {
+              src: e.target.href,
+              credit: e.target.getAttribute('data-credit')
+            }
         }))
       })
     },
@@ -74,6 +79,7 @@ export default {
   top: 40px;
   right: 20px;
   max-width: 50%;
+  box-shadow: 3px 5px 10px 5px rgba(black, 0.1);
 
   &-close {
     float: right;

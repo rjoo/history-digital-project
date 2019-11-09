@@ -10,8 +10,8 @@
 
     <nav class="nav">
       <ul>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Resources</a></li>
+        <li><a href="#" @click.prevent="activeContentComponent = 'ContentAbout'">Introduction</a></li>
+        <li><a href="#" @click.prevent="activeContentComponent = 'ContentResources'">Resources</a></li>
       </ul>
     </nav>
 
@@ -36,10 +36,25 @@
         ></the-description>
       </div>
     </main>
+
+    <transition name="fade">
+      <div v-if="activeContentComponent" class="full-page-content">
+        <component
+          class="content-wrapper"
+          :is="activeContentComponent"
+        >
+          <button v-if="!isIntro" role="button" class="close" @click.prevent="activeContentComponent = ''"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/><path d="M0 0h24v24H0z" fill="none"/></svg></button>
+
+          <button v-else @click.prevent="activeContentComponent = ''; isIntro = false">Start Timeline</button>
+        </component>
+      </div>
+    </transition>
   </div>
 </template>
 
 <script>
+import ContentAbout from '@/components/ContentAbout'
+import ContentResources from '@/components/ContentResources'
 import TheDescription from '@/components/TheDescription'
 import TheMap from '@/components/TheMap'
 import TheTimeline from '@/components/TheTimeline'
@@ -48,6 +63,8 @@ import mapData from '@/map-data.json'
 export default {
   name: 'app',
   components: {
+    ContentAbout,
+    ContentResources,
     TheDescription,
     TheMap,
     TheTimeline
@@ -55,9 +72,11 @@ export default {
 
   data() {
     return {
+      activeContentComponent: 'ContentAbout',
       activeYear: null,
       activeYearLabel: '',
       activeYearMapData: {},
+      isIntro: true,
       mdKey: '',
       timelinePoints: mapData.map(({ year, label }) => ({ year, label }))
     }
@@ -111,6 +130,55 @@ export default {
   font-family: 'Lato', sans-serif;
   font-weight: 300;
   color: #1c1c1c;
+}
+
+button {
+  padding: 10px;
+  background: burlywood;
+  // border: 1px solid #1c1c1c;
+  border: 0;
+  cursor: pointer;
+  font-weight: 600;
+  color: darken(burlywood, 50%);
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background: lighten(burlywood, 20%);
+  }
+}
+
+.full-page-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  // padding: 40px;
+  z-index: 5;
+  background: rgba(black, 0.9);
+
+  .close {
+    border: 0;
+    background: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+
+    svg {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  .content-wrapper {
+    position: relative;
+    box-shadow: 3px 5px 10px 5px rgba(black, 0.2);
+    padding: 40px;
+    background: white;
+    max-width: 600px;
+    margin: 80px auto 0;
+  }
 }
 
 .nav {
@@ -169,7 +237,6 @@ a {
   min-width: 350px;
   min-height: 10%;
   max-width: 30%;
-  border-radius: 8px;
   box-shadow: 3px 5px 10px 5px rgba(black, 0.1);
 }
 
@@ -191,9 +258,6 @@ a {
 
   button {
     padding: 2px 5px;
-    background: burlywood;
-    border: 1px solid #1c1c1c;
-    cursor: pointer;
     margin: 0 1px;
 
     svg {
@@ -202,5 +266,12 @@ a {
       height: 30px;
     }
   }
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
 }
 </style>
