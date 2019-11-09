@@ -1,18 +1,24 @@
 <template>
-  <ul class="timeline">
-    <li
-      class="timeline-item"
-      :class="{ 'is-active': year === point.year }"
-      v-for="point in points"
-      :key="point.year"
-    >
-      <button role="button" class="tp-point" @click="setActivePoint(point.year)">
-        <span class="tp-dot"></span>
-        <span class="tp-year">{{ Math.abs(point.year) }} {{ getYearNotation(point.year) }}</span>
-        <span class="tp-label">{{ point.label }}</span>
-      </button>
-    </li>
-  </ul>
+  <div class="timeline-wrapper">
+    <ul class="timeline">
+      <li
+        v-for="point in points"
+        ref="points"
+        :key="point.year"
+        class="timeline-item"
+        :class="{ 'is-active': year === point.year }"
+        :style="{ 'padding-bottom': calculateDistanceToNext(point.year) + 'px' }"
+      >
+        <button role="button" class="tp-point" @click="setActivePoint($event, point.year)">
+          <span class="tp-dot"></span>
+          <span class="tp-year">{{ Math.abs(point.year) }} {{ getYearNotation(point.year) }}</span>
+          <!-- <span class="tp-label">{{ point.label }}</span> -->
+        </button>
+      </li>
+    </ul>
+
+    <div class="timeline-line"></div>
+  </div>
 </template>
 
 <script>
@@ -34,17 +40,48 @@ export default {
     year: {
       handler(year) {
         this.activePointYear = year;
+
+        this.scrollToPoint();
       },
       immediate: true
     }
   },
 
   methods: {
+    calculateDistanceToNext(year) {
+      const i = this.points.findIndex(p => p.year === year);
+      const nextPoint = this.points[i + 1];
+
+      if (!nextPoint)
+        return 0;
+
+      const difference = (nextPoint.year - year);
+      const boundaries = { min: 20, max: 150 };
+
+      if (difference < boundaries.min)
+        return boundaries.min;
+      else if (difference > boundaries.max)
+        return boundaries.max;
+      return difference;
+    },
+
     getYearNotation(year) {
       return year < 0 ? 'BCE' : 'CE';
     },
 
-    setActivePoint(year) {
+    scrollToPoint() {
+      // eslint-disable-next-line
+      this.$nextTick(() => {
+        this.$refs.points.forEach(point => {
+          if (point.classList.contains('is-active') && point.scrollIntoView)
+            point.scrollIntoView({ behavior: 'smooth' })
+        })
+      })
+    },
+
+    setActivePoint(e, year) {
+      e.currentTarget.blur();
+
       this.$emit('change', year);
     }
   }
@@ -52,27 +89,32 @@ export default {
 </script>
 
 <style lang="scss">
+.timeline-wrapper {
+  position: relative;
+}
+.timeline-line {
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  height: calc(100% - 20px);
+  width: 1px;
+  border-left: 1px solid black;
+  opacity: 0.3;
+}
 .timeline {
+  position: relative;
+  padding: 10px;
   list-style: none;
   margin: 0;
-  padding: 10px;
-  max-height: calc(100vh - 20px);
+  padding: 0;
+  max-height: 100vh;
   overflow-y: auto;
 
   &-item {
     position: relative;
-    padding-bottom: 40px;
 
-    &:not(:last-child):after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      margin-top: -5px;
-      left: 5px;
-      height: 40px;
-      width: 1px;
-      border-left: 1px solid black;
-      opacity: 0.3;
+    &:not(:last-child) {
+      padding-bottom: 40px;
     }
   }
 }
@@ -80,9 +122,13 @@ export default {
   cursor: pointer;
   background: none;
   border: 0;
-  padding: 10px 10px 10px 0;
+  padding: 10px 0 10px 15px;
   display: flex;
   align-items: center;
+  width: 100%;
+  background: white;
+  position: relative;
+  z-index: 1;
 
   &:hover,
   &:focus {

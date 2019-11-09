@@ -1,4 +1,5 @@
 module.exports = {
+  publicPath: '/rjoo8042/public/',
   chainWebpack: config => {
     config.module
       .rule('md')

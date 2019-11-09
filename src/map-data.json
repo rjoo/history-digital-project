@@ -13,7 +13,7 @@
           "label": "Byzantium"
         }
       ],
-      "zoom": 10
+      "zoom": 9
     }
   },
   {
@@ -72,7 +72,7 @@
     "label": "Roman Empire divided",
     "desc": "<h1>395 CE</h1><p>Roman Empire was split into two, the Western Roman Empire and the Eastern Roman Empire.</p>",
     "map": {
-      "center": { "lat": 39.0109, "lng": 14.9259 },
+      "center": { "lat": 39.0109, "lng": 8.9259 },
       "markers": [
         {
           "icon": "capital",
@@ -83,6 +83,18 @@
           "icon": "capital",
           "position": { "lat": 41.0122, "lng": 28.9760 },
           "label": "Constantipole"
+        },
+        {
+          "icon": "arrowdown",
+          "position": { "lat": 48.0431, "lng": 10.6574 },
+          "label": "Germanic attacks",
+          "labelOrigin": { "x": 12, "y": -8 }
+        },
+        {
+          "icon": "arrowdown",
+          "position": { "lat": 44.0431, "lng": 22.6574 },
+          "label": "Huns attacks",
+          "labelOrigin": { "x": 12, "y": -8 }
         }
       ],
       "zoom": 4,
@@ -140,6 +152,236 @@
           "name": "byzantine-526ce"
         }
       ]
+    }
+  },
+  {
+    "year": 567,
+    "label": "Conquests from all directions",
+    "map": {
+      "center": { "lat": 41.0122, "lng": 16.9760 },
+      "markers": [
+        {
+          "icon": "crown",
+          "position": { "lat": 41.9028, "lng": 12.4964 },
+          "label": "Lombards"
+        },
+        {
+          "icon": "crown",
+          "position": { "lat": 39.3932943, "lng": 21.5551758 },
+          "label": "Slavs"
+        },
+        {
+          "icon": "arrowleftup",
+          "position": { "lat": 29.3932943, "lng": 24.5551758 },
+          "label": "Arab Caliphate"
+        },
+        {
+          "icon": "swords",
+          "position": { "lat": 38.7388841, "lng": 38.10999 },
+          "label": "Byzantine / Arab"
+        },
+        {
+          "icon": "capital",
+          "position": { "lat": 41.0122, "lng": 28.9760 },
+          "label": "Constantipole"
+        }
+      ],
+      "zoom": 5,
+      "poly": [
+        {
+          "fill": "red",
+          "name": "754ce"
+        }
+      ]
+    }
+  },
+  {
+    "year": 774,
+    "label": "Charlemagne",
+    "map": {
+      "center": { "lat": 43.7692299, "lng": 10.7844423 },
+      "markers": [
+        {
+          "icon": "crown",
+          "position": { "lat": 41.9028, "lng": 12.4964 },
+          "label": "Charlemagne"
+        },
+        {
+          "icon": "capital",
+          "position": { "lat": 41.0122, "lng": 28.9760 },
+          "label": "Constantipole"
+        }
+      ],
+      "zoom": 5,
+      "poly": [
+        {
+          "fill": "blue",
+          "name": "roman-800ce"
+        },
+        {
+          "fill": "red",
+          "name": "byzantine-800ce"
+        }
+      ]
+    }
+  },
+  {
+    "year": 814,
+    "label": "West crumbles",
+    "map": {
+      "center": { "lat": 41.0122, "lng": 14.9760 },
+      "markers": [
+        {
+          "icon": "capital",
+          "position": { "lat": 41.0122, "lng": 28.9760 },
+          "label": "Constantipole"
+        },
+        {
+          "icon": "swords",
+          "position": { "lat": 40.200476, "lng": 9.052801 },
+          "label": "Loss to Arabs"
+        },
+        {
+          "icon": "swords",
+          "position": { "lat": 37.419159, "lng": 14.263773 },
+          "label": "Loss to Arabs"
+        },
+        {
+          "icon": "swords",
+          "position": { "lat": 35.177418, "lng": 25.033719 },
+          "label": "Loss to Arabs"
+        },
+        {
+          "icon": "circle",
+          "position": { "lat": 41.943888, "lng": 23.749006 },
+          "label": "Bulgars"
+        }
+      ],
+      "zoom": 5,
+      "poly": [
+        {
+          "fill": "red",
+          "name": "814ce"
+        }
+      ]
+    }
+  },
+  {
+    "year": 976,
+    "label": "Resurgence",
+    "map": {
+      "center": { "lat": 41.0122, "lng": 14.9760 },
+      "markers": [
+        {
+          "icon": "capital",
+          "position": { "lat": 41.0122, "lng": 28.9760 },
+          "label": "Constantipole"
+        }
+      ],
+      "zoom": 5,
+      "poly": [
+        {
+          "fill": "red",
+          "name": "976ce"
+        }
+      ]
+    }
+  },
+  {
+    "year": 1055,
+    "label": "Beginning of the end",
+    "map": {
+      "center": { "lat": 41.0122, "lng": 14.9760 },
+      "markers": [
+        {
+          "icon": "capital",
+          "position": { "lat": 41.0122, "lng": 28.9760 },
+          "label": "Constantipole"
+        },
+        {
+          "icon": "circle",
+          "position": { "lat": 40.4139558, "lng": 17.1386719 },
+          "label": "Norman mercenaries"
+        },
+        {
+          "icon": "swords",
+          "position": { "lat": 39.2375272, "lng": 42.2140196 },
+          "label": "Battle of Manzikert"
+        }
+      ],
+      "zoom": 5,
+      "poly": [
+        {
+          "fill": "red",
+          "name": "1055ce"
+        }
+      ]
+    }
+  },
+  {
+    "year": 1181,
+    "label": "The Fourth Crusade",
+    "map": {
+      "center": { "lat": 41.0122, "lng": 14.9760 },
+      "markers": [
+        {
+          "icon": "capital",
+          "position": { "lat": 41.0122, "lng": 28.9760 },
+          "label": "Constantipole"
+        }
+      ],
+      "zoom": 5,
+      "poly": [
+        {
+          "fill": "red",
+          "name": "1288ce"
+        }
+      ]
+    }
+  },
+  {
+    "year": 1403,
+    "label": "The Ottoman Turks",
+    "map": {
+      "center": { "lat": 41.0122, "lng": 14.9760 },
+      "markers": [
+        {
+          "icon": "capital",
+          "position": { "lat": 41.0122, "lng": 28.9760 },
+          "label": "Constantipole"
+        }
+      ],
+      "zoom": 5,
+      "poly": [
+        {
+          "fill": "red",
+          "name": "1403ce-1"
+        },
+        {
+          "fill": "red",
+          "name": "1403ce-2"
+        },
+        {
+          "fill": "red",
+          "name": "1403ce-3"
+        }
+      ]
+    }
+  },
+  {
+    "year": 1453,
+    "label": "The fall",
+    "map": {
+      "center": { "lat": 41.0122, "lng": 28.9760 },
+      "markers": [
+        {
+          "icon": "capital",
+          "position": { "lat": 41.0122, "lng": 28.9760 },
+          "label": "Constantipole"
+        }
+      ],
+      "zoom": 8,
+      "poly": []
     }
   }
 ]

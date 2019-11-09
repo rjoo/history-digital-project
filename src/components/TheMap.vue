@@ -7,9 +7,9 @@
     map-type-id="terrain"
   >
     <GmapMarker
-      v-for="marker in markers"
-      :key="marker.label"
-      :icon="getMarkerIcon(marker.icon)"
+      v-for="(marker, i) in markers"
+      :key="marker.label + i"
+      :icon="getMarkerIcon(marker)"
       :position="marker.position"
       :label="marker.label"
     />
@@ -85,16 +85,21 @@ export default {
   },
 
   methods: {
-    getMarkerIcon(icon) {
+    getMarkerIcon({ icon, labelOrigin = {} }) {
       // for now
       const urls = {
+        arrowdown: 'https://res.cloudinary.com/rjoo/image/upload/v1573176539/down-arrow_1_ebqlsx.png',
+        arrowleftdown: 'https://res.cloudinary.com/rjoo/image/upload/v1573176398/arrow-left-down_qfg52x.png',
+        arrowleftup: 'https://res.cloudinary.com/rjoo/image/upload/v1573176351/arrow-left-up_lcwefj.png',
         capital: 'https://maps.google.com/mapfiles/kml/shapes/capital_big.png',
-        circle: 'http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png'
+        circle: 'http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png',
+        crown: 'https://res.cloudinary.com/rjoo/image/upload/v1573176268/crown_jwtuqr.png',
+        swords: 'https://res.cloudinary.com/rjoo/image/upload/v1573176200/swords_ejuldh.png'
       }
       return icon && {
         url: urls[icon],
-        scaledSize: { width: 20, height: 20 },
-        labelOrigin: { x: 10, y: 30 }
+        scaledSize: { width: 22, height: 22 },
+        labelOrigin: { x: labelOrigin.x || 11, y: labelOrigin.y || 30 }
       }
     },
 
@@ -115,7 +120,7 @@ export default {
 
 <style lang="scss">
 #gmap {
-  width: calc(100vw - 140px);
+  width: calc(100vw - 120px);
   height: 100vh;
   margin-left: auto;
 }
