@@ -27,6 +27,18 @@
           <li>Tool used to generate polygon shapes on the map</li>
         </ul>
       </li>
+      <li>Encyclopedias:</li>
+      <ul>
+        <li>
+          https://www.ancient.eu/
+        </li>
+        <li>
+          https://www.britannica.com/
+        </li>
+        <li>
+          https://www.wikipedia.org/
+        </li>
+      </ul>
     </ul>
     <slot>Test</slot>
   </div>
