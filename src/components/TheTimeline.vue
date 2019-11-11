@@ -1,6 +1,6 @@
 <template>
   <div class="timeline-wrapper">
-    <ul class="timeline">
+    <ul ref="timeline" class="timeline">
       <li
         v-for="point in points"
         ref="points"
@@ -22,6 +22,8 @@
 </template>
 
 <script>
+import VueScrollTo from 'vue-scrollto'
+
 export default {
   props: {
     points: {
@@ -33,6 +35,14 @@ export default {
     year: {
       type: Number,
       default: 0
+    }
+  },
+
+  mounted() {
+    this.scrollOptions = {
+      container: this.$refs.timeline,
+      easing: 'ease-in',
+      offset: -70
     }
   },
 
@@ -73,8 +83,9 @@ export default {
       // eslint-disable-next-line
       this.$nextTick(() => {
         this.$refs.points.forEach(point => {
-          if (point.classList.contains('is-active') && point.scrollIntoView)
-            point.scrollIntoView({ behavior: 'smooth' })
+          if (point.classList.contains('is-active') && point.scrollIntoView) {
+            VueScrollTo.scrollTo(point, this.scrollOptions)
+          }
         })
       })
     },

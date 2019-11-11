@@ -1,0 +1,31 @@
+{
+  "27bce": [
+    { "src": "augustus.jpg", "description": "Marble statue of Emperor Augustus", "credit": "Britannica Encyclopedia", "creditUrl": "https://www.britannica.com/biography/Augustus-Roman-emperor" }
+  ],
+  "330ce": [
+    { "src": "constantine.jpg", "description": "Head portrait of Emperor Constantine I", "credit": "The Met", "creditUrl": "https://www.metmuseum.org/art/collection/search/252884" },
+    { "src": "first-church.jpg", "description": "Hagia Irene is the first church and of many Christianity influenced architecture built in Constantinople", "credit": "Livius", "creditUrl": "https://www.livius.org/articles/place/constantinople-istanbul/constantinople-photos/constantinople-church-of-divine-peace/" }
+  ],
+  "395ce": [
+    { "src": "walls.png", "description": "The fortification walls that deterred many eventual attacks to the city featured three layers and spanned four miles.", "credit": "Ancient History Encyclopedia", "creditUrl": "https://www.ancient.eu/image/7740/cross-section-of-the-theodosian-walls/" }
+  ],
+  "526ce": [
+    { "src": "corpus-juris-civilus.jpg", "description": "Two text fragments of the Corpus Juris Civilis, which means \"Body of Law\".", "credit": "Ancient History Encyclopedia", "creditUrl": "https://www.ancient-origins.net/sites/default/files/Two-manuscript-fragments.jpg?itok=2lBWP2DB" }
+  ],
+  "774ce": [
+    { "src": "charlemagne.jpg", "description": "Painting of Charlemagne receiving Alcuin, an English scholar, into his court", "credit": "ThoughtCo", "creditUrl": "https://www.thoughtco.com/charlemagne-king-of-the-franks-1788691" }
+  ],
+  "976ce": [
+    { "src": "basil-ii.jpg", "description": "Basil II being annointed by angels with people lying before him", "credit": "Wikipedia", "creditUrl": "https://en.wikipedia.org/wiki/Basil_II#/media/File:Basilios_II.jpg" }
+  ],
+  "1055ce": [
+    { "src": "manzikert.jpg", "description": "Depiction of the Battle of Manzikert", "credit": "Ancient History Encyclopedia", "creditUrl": "https://www.ancient.eu/image/8057/battle-of-manzikert/"}
+  ],
+  "1347ce": [
+    { "src": "1347-coin.jpg", "description": "Byzantine coins depicting Jesus Christ and Emperor Basil II", "credit": "Ancient History Encyclopedia", "creditUrl": "https://www.ancient.eu/Byzantine_Coinage/" }
+  ],
+  "1422ce": [
+    { "src": "1422-constantinople-map.jpg", "description": "Oldest surviving map of Constantinople designed in 1422 CE", "credit": "Wikipedia", "creditUrl": "https://en.wikipedia.org/wiki/Siege_of_Constantinople_(1422)#/media/File:Map_of_Constantinople_(1422)_by_Florentine_cartographer_Cristoforo_Buondelmonte.jpg" },
+    { "src": "ottoman-cannon.jpg", "description": "Dismantled Ottoman super cannon that weighed close to 17 tons and was 17 feet in length", "credit": "History Answers", "creditUrl": "https://www.historyanswers.co.uk/medieval-renaissance/ottoman-super-cannon-the-bombard-that-built-an-empire/" }
+  ]
+}

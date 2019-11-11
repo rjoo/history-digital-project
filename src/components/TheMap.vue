@@ -94,7 +94,8 @@ export default {
         capital: 'https://maps.google.com/mapfiles/kml/shapes/capital_big.png',
         circle: 'http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png',
         crown: 'https://res.cloudinary.com/rjoo/image/upload/v1573176268/crown_jwtuqr.png',
-        swords: 'https://res.cloudinary.com/rjoo/image/upload/v1573176200/swords_ejuldh.png'
+        swords: 'https://res.cloudinary.com/rjoo/image/upload/v1573176200/swords_ejuldh.png',
+        warship: 'https://res.cloudinary.com/rjoo/image/upload/v1573405732/battleship_cwkgx7.png'
       }
       return icon && {
         url: urls[icon],

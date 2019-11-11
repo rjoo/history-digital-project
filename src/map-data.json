@@ -3,7 +3,6 @@
     "year": -667,
     "mdKey": "667bce",
     "label": "Colonization",
-    "desc": "<h1>667 BCE</h1><p>Byzantium was first colonized by ancient Greeks from Megara. Byzantium was first colonized by ancient Greeks from Megara. Byzantium was first colonized by ancient Greeks from Megara. Byzantium was first colonized by ancient Greeks from Megara. </p>",
     "map": {
       "center": { "lat": 41.0122, "lng": 28.9760 },
       "markers": [
@@ -20,7 +19,6 @@
     "year": -27,
     "mdKey": "27bce",
     "label": "Roman rule",
-    "desc": "<h1>27 BCE</h1><p>Byzantium came under Roman rule.</p>",
     "map": {
       "center": { "lat": 39.0109, "lng": 14.9259 },
       "markers": [
@@ -48,14 +46,13 @@
     "year": 330,
     "mdKey": "330ce",
     "label": "New capital of the Roman Empire",
-    "desc": "<h1>330 CE</h1><p>Emperor Constantine founded the new capital of Rome where Byzantium stood, soon to be known as Constantipole.</p>",
     "map": {
       "center": { "lat": 41.0122, "lng": 28.9760 },
       "markers": [
         {
           "icon": "capital",
           "position": { "lat": 41.0122, "lng": 28.9760 },
-          "label": "Constantipole"
+          "label": "Constantinople"
         }
       ],
       "zoom": 6,
@@ -70,7 +67,6 @@
   {
     "year": 395,
     "label": "Roman Empire divided",
-    "desc": "<h1>395 CE</h1><p>Roman Empire was split into two, the Western Roman Empire and the Eastern Roman Empire.</p>",
     "map": {
       "center": { "lat": 39.0109, "lng": 8.9259 },
       "markers": [
@@ -82,7 +78,7 @@
         {
           "icon": "capital",
           "position": { "lat": 41.0122, "lng": 28.9760 },
-          "label": "Constantipole"
+          "label": "Constantinople"
         },
         {
           "icon": "arrowdown",
@@ -113,14 +109,13 @@
   {
     "year": 476,
     "label": "Western Empire falls",
-    "desc": "<h1>476 CE</h1><p>The Western Empire falls to the Germanic Kingdoms but the Eastern Empire continues and is now called the Byzantine Empire</p>",
     "map": {
       "center": { "lat": 41.0122, "lng": 28.9760 },
       "markers": [
         {
           "icon": "capital",
           "position": { "lat": 41.0122, "lng": 28.9760 },
-          "label": "Constantipole"
+          "label": "Constantinople"
         }
       ],
       "zoom": 5,
@@ -135,14 +130,13 @@
   {
     "year": 526,
     "label": "Western reconquering",
-    "desc": "<h1>526 CE</h1><p>Emperor Justinian makes large efforts to regain the west.</p>",
     "map": {
       "center": { "lat": 41.0122, "lng": 28.9760 },
       "markers": [
         {
           "icon": "capital",
           "position": { "lat": 41.0122, "lng": 28.9760 },
-          "label": "Constantipole"
+          "label": "Constantinople"
         }
       ],
       "zoom": 4,
@@ -183,7 +177,7 @@
         {
           "icon": "capital",
           "position": { "lat": 41.0122, "lng": 28.9760 },
-          "label": "Constantipole"
+          "label": "Constantinople"
         }
       ],
       "zoom": 5,
@@ -209,7 +203,7 @@
         {
           "icon": "capital",
           "position": { "lat": 41.0122, "lng": 28.9760 },
-          "label": "Constantipole"
+          "label": "Constantinople"
         }
       ],
       "zoom": 5,
@@ -234,7 +228,7 @@
         {
           "icon": "capital",
           "position": { "lat": 41.0122, "lng": 28.9760 },
-          "label": "Constantipole"
+          "label": "Constantinople"
         },
         {
           "icon": "swords",
@@ -275,7 +269,7 @@
         {
           "icon": "capital",
           "position": { "lat": 41.0122, "lng": 28.9760 },
-          "label": "Constantipole"
+          "label": "Constantinople"
         }
       ],
       "zoom": 5,
@@ -296,7 +290,7 @@
         {
           "icon": "capital",
           "position": { "lat": 41.0122, "lng": 28.9760 },
-          "label": "Constantipole"
+          "label": "Constantinople"
         },
         {
           "icon": "circle",
@@ -327,7 +321,7 @@
         {
           "icon": "capital",
           "position": { "lat": 41.0122, "lng": 28.9760 },
-          "label": "Constantipole"
+          "label": "Constantinople"
         }
       ],
       "zoom": 5,
@@ -340,7 +334,7 @@
     }
   },
   {
-    "year": 1403,
+    "year": 1347,
     "label": "The Ottoman Turks",
     "map": {
       "center": { "lat": 41.0122, "lng": 14.9760 },
@@ -348,7 +342,7 @@
         {
           "icon": "capital",
           "position": { "lat": 41.0122, "lng": 28.9760 },
-          "label": "Constantipole"
+          "label": "Constantinople"
         }
       ],
       "zoom": 5,
@@ -369,7 +363,7 @@
     }
   },
   {
-    "year": 1453,
+    "year": 1422,
     "label": "The fall",
     "map": {
       "center": { "lat": 41.0122, "lng": 28.9760 },
@@ -377,10 +371,20 @@
         {
           "icon": "capital",
           "position": { "lat": 41.0122, "lng": 28.9760 },
-          "label": "Constantipole"
+          "label": "Constantinople"
+        },
+        {
+          "icon": "warship",
+          "position": { "lat": 41.0198, "lng": 28.980 },
+          "label": "Ottomans in the sea"
+        },
+        {
+          "icon": "swords",
+          "position": { "lat": 41.0130, "lng": 28.9660 },
+          "label": "Ottomans siege on land"
         }
       ],
-      "zoom": 8,
+      "zoom": 14,
       "poly": []
     }
   }
